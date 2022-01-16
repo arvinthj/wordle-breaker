@@ -4,7 +4,7 @@ A minimal wordle breaker written in Vanilla JS that aims to break the day's word
 
 Well, now I know that there is no fun in letting a system solve the day's wordle rather than solving it yourself. I do think the same way myself. But this was still a fun experiment to carry out over the weekend. So this is just me wanting to share the results across.
 
-![alt text](https://github.com/arvinthj/wordle-breaker/blob/master/wordle-breaker.gif?raw=true) 
+![alt text](https://github.com/arvinthj/wordle-breaker/blob/master/wordleBreaker.gif?raw=true) 
 
 If you are curious to know how it goes on about guessing the word, feel free to take it for a spin.
 
