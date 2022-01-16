@@ -2,9 +2,11 @@
 
 A minimal wordle breaker written in Vanilla JS that aims to break the day's wordle within the allowed number of guesses. If you are unaware of what wordle is, do check out https://www.powerlanguage.co.uk/wordle/. It's a simple guessing game that has turned into a worldwide phenomenon by now (Circa. January, 2022)
 
-Well, now I know that there is no fun in letting a system solve the day's wordle rather than solving it yourself. I do think the same way myself. But this was still a fun experiment to carry out and it was one that got me going for a couple of days. And this is just me wanting to share the results across. 
+Well, now I know that there is no fun in letting a system solve the day's wordle rather than solving it yourself. I do think the same way myself. But this was still a fun experiment to carry out over the weekend. So this is just me wanting to share the results across.
 
-If you, like me are curious to know how it goes on about guessing the word, do take it for a spin.
+![alt text](https://github.com/arvinthj/wordle-breaker/blob/master/wordle-breaker.gif?raw=true) 
+
+If you are curious to know how it goes on about guessing the word, feel free to take it for a spin.
 
 ## The Process
 
