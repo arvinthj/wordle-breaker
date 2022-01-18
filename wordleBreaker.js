@@ -172,5 +172,11 @@ class WordleBreaker {
           break;
       }        
     })
+    // A guess containing recurring letters with one of them present at the rit position mit push the other one to blacklist
+    // Addressing the above by filtering blacklist for letters present at rit position
+    let whitelistedLettersAtRitPosition = Object.values(self.whitelistedLettersAtRitPosition);
+    self.letterBlacklist = self.letterBlacklist.filter(function(letter) {
+      return !whitelistedLettersAtRitPosition.includes(letter);
+    })
   }
 }
