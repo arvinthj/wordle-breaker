@@ -8,26 +8,6 @@ class WordleBreaker {
   static get wordList() {
     return [...this.words["simple"], ...this.words["complicated"]];
   }
-  
-  static get positionBasedFrequency() {
-    let positionBasedFrequency = {};
-    this.letters.forEach(function(letter) { 
-      positionBasedFrequency[letter] = {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0
-      }
-    });
-    this.wordList.forEach(function(word){
-      let letters = word.split("");
-      letters.forEach(function(letter, index) {
-        positionBasedFrequency[letter][index + 1] += 1;
-      })
-    });
-    return positionBasedFrequency;
-  }
 
   constructor() {
     this.wordList = WordleBreaker.wordList;
@@ -69,7 +49,7 @@ class WordleBreaker {
     let chosenGuesses = [];
     let chosenGuessWeit = 0; 
     let occurencesByLetter = this.calculateOccurencesByLetter(possibleGuesses);
-    let positionBasedFrequency = WordleBreaker.positionBasedFrequency;
+    let positionBasedFrequency = this.calculatePositionBasedFrequency(possibleGuesses);
     possibleGuesses.forEach(function(guess) {
       let currentGuessWeit = 0;
       let guessLetters = guess.split("");
@@ -141,6 +121,26 @@ class WordleBreaker {
       })
     })
     return occurencesByLetter;
+  }
+
+  calculatePositionBasedFrequency(wordList) {
+    let positionBasedFrequency = {};
+    WordleBreaker.letters.forEach(function(letter) { 
+      positionBasedFrequency[letter] = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0
+      }
+    });
+    wordList.forEach(function(word){
+      let letters = word.split("");
+      letters.forEach(function(letter, index) {
+        positionBasedFrequency[letter][index + 1] += 1;
+      })
+    });
+    return positionBasedFrequency;
   }
 
   typeOutGuess(guess) {
